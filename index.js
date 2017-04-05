@@ -8,7 +8,7 @@ var mongo = require('mongodb');
 var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
-var tasks = require('./routes/tasks');
+// var tasks = require('./routes/tasks');
 
 var app = express();
 
