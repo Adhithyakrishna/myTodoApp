@@ -1,0 +1,43 @@
+  <div class="taskDetails">
+    {{#each taskList}}
+     <div id="{{this._id}}" class="taskIdentifier">
+           <div class="task">{{addone @index}} ]   {{this.task}}</div>
+{{!--          <div class="taskNumber">{{addone @index}}  ]</div>
+         <div class="task">{{this.task}}</div> --}}
+         <div class="taskDescription">{{this.caseEndDetails}}</div>
+         <div class="taskStatusBtnHolder">
+            <button class='reopenTask'>Reopen</button>
+         </div>
+    </div>
+    {{/each}}
+  </div>
+    <div class="datePicker">
+       <form method="post">
+        <div class="getDate">Get tasks for the date:</div>
+        <div class="dateInputHolder">
+           {{!-- <label for="startDate">Task on :</label> --}}
+
+   {{#if taskList}}
+          {{#if hasDate}}
+             <input class="strDate" value = {{taskList.0.updatedAt}} type ="date" name="startingDate">
+          {{else}}
+             <input class="strDate" type ="date" name="startingDate">
+          {{/if}}
+   {{else}}
+           <input class="strDate" type ="date" name="startingDate">
+   {{/if}}
+
+        </div>
+  <div class="issueFinderDiv">
+            <input type ="submit" class="findIssues" name="find">
+  </div>
+        </form>
+  </div>
+ 
+  <div class="buttonContainer">
+    <button class="printJira" name="print">copy for Jira</button>
+    <button class="listTasks" name="ListTask">List all tasks</button>
+  </div>
+   <div class="taskBoxHolder">
+
+  </div>

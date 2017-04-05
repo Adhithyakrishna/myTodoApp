@@ -1,0 +1,816 @@
+body
+{
+    font-family: cursive;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #fff1c6;
+}
+.dateInputHolder,
+.issueFinderDiv,
+.container,
+.headerHolder
+{
+    float: left;
+}
+.headerHolder
+{
+    line-height: 39px;
+}
+.issueFinderDiv
+{
+    padding-left: 50px;
+}
+.headerGroup
+{
+    font-size: 24px;
+    text-align: center;
+}
+.myQuote
+{
+    font-size: 21px;
+    text-align: center;
+    color: red;
+}
+
+.headerHolder,
+.taskListHolder
+{
+    width: 75%;
+    text-align: center;
+}
+button.disabled {
+    background: #c3bebe !important;
+}
+.myHeader1,
+.myHeader2,
+.myHeader,
+.myHeader3
+{
+    display: inline-block;
+    border: 1px solid #673ab7;
+    border-radius: 8px;
+}
+.headerContainer
+{
+    margin: 0 0 40px 0;
+}
+
+.taskIdentifier
+{
+    width: 100%;
+}
+.taskStatusBtnHolder
+{
+    line-height: 46px;
+    float: left;
+    width: 22%;
+}
+.taskDescription,.task
+{
+    color: black;
+    font-weight: bold;
+}
+.task,
+.taskNumber
+{
+    line-height: 45px;
+    float: left;
+    width: 31%;
+    height: 45px;
+}
+.taskNumber
+{
+    width: 2%;
+}
+.taskDescription
+{
+    line-height: 45px;
+    float: left;
+    width: 45%;
+    height: 45px;
+}
+.contentHolder
+{
+    width: 100%;
+    min-height: 1000px;
+}
+.contentHolder,
+.taskIdentifier
+{
+    overflow: hidden;
+    box-sizing: border-box;
+    border-top: solid 1px #cabbb0;
+}
+input.taskInput,
+input.taskDescriptionInput
+{
+    font-size: 14px;
+    font-weight: bolder;
+    box-sizing: border-box;
+    height: 40px;
+    padding: 10px;
+    color: black;
+    border: 1px solid;
+}
+input.taskInput
+{
+    width: 33%;
+}
+input.taskDescriptionInput
+{
+    width: 65%;
+}
+.taskIncrementer
+{
+    width: 100%;
+    height: 50px;
+    margin-top: 40px;
+    text-align: center;
+}
+.addTaskBtn,
+.addTaskToDb
+{
+    font-size: 14px;
+    border-radius: 8px;
+    font-weight: bolder;
+    line-height: 1.5;
+    max-width: 180px;
+    height: 50px;
+    width: 48%;
+    background: yellowgreen;
+}
+.taskAdder
+{
+    padding: 12px 0;
+}
+button.taskRemoved,
+.cancelInfo
+{
+    box-sizing: border-box;
+    height: 31px;
+    border: 1px solid rgb(191, 31, 17);
+    border-radius: 3px;
+    background: linear-gradient(rgb(232, 92, 76) 5%, rgb(207, 0, 0) 100%) rgb(232, 58, 38);
+    box-shadow: rgb(235, 41, 23) 0 1px 0 0 inset;
+}
+.commentBoxHolder
+{
+    margin: 25px 0 0 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 15px;
+}
+
+input.myTextHolder
+{
+    width: 50%;
+    height: 90px;
+    margin: 0 auto;
+}
+
+button.upDateDetails,
+button.cancelInfo
+{
+    width: 19%;
+    height: 40px;
+    margin: 10px;
+}
+.reOpenedTask
+{
+    border: 1px solid red;
+}
+a
+{
+    background: transparent;
+}
+
+a:active,
+a:hover,button
+{
+    outline: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea
+{
+    font: inherit;
+
+    margin: 0;
+
+    color: inherit;
+}
+
+button
+{
+    overflow: visible;
+}
+
+button,
+select
+{
+    text-transform: none;
+}
+
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit]
+{
+    cursor: pointer;
+
+    -webkit-appearance: button;
+}
+
+button[disabled],
+html input[disabled]
+{
+    cursor: default;
+}
+
+input
+{
+    line-height: normal;
+}
+
+html,
+body
+{
+    height: 100%;
+}
+
+html
+{
+    font-family: sans-serif;
+    font-size: 100%;
+
+    -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+}
+
+body
+{
+    font-family: 'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif;
+    font-size: 1em;
+    line-height: 1.6;
+
+    overflow: hidden;
+    overflow-y: scroll;
+
+    min-width: 100%;
+    margin: 0;
+
+    color: #4c4c4c;
+    background-color: #fff;
+
+    text-rendering: optimizeLegibility;
+}
+
+div
+{
+    position: relative;
+}
+
+a
+{
+    font-weight: 400;
+
+    text-decoration: none;
+
+    color: #00b3e4;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+a:focus,
+a:hover
+{
+    color: #4c4c4c;
+}
+
+p
+{
+    font-weight: 300;
+
+    margin: 0 0 1em;
+}
+
+.text-center
+{
+    text-align: center;
+}
+
+/*Normalisation completed*/
+
+.offcanvas
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    width: 300px;
+    height: 100%;
+
+    cursor: default;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-transition: width ease-in-out .28s, background linear .1s;
+       -moz-transition: width ease-in-out .28s, background linear .1s;
+         -o-transition: width ease-in-out .28s, background linear .1s;
+            transition: width ease-in-out .28s, background linear .1s;
+    -webkit-transform: translate3d(0px, 0, 0);
+       -moz-transform: translate(0px, 0);
+        -ms-transform: translate(0px, 0);
+            transform: translate(0px, 0);
+
+    color: #c8c8c8;
+    background: #222;
+
+    -webkit-touch-callout: none;
+         -o-user-select: none;
+}
+
+.offcanvas ul
+{
+    font-weight: 300;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.offcanvas li
+{
+    display: block;
+}
+
+.offcanvas a.moveleft
+{
+    padding-left: 53px;
+}
+
+.offcanvas a
+{
+    display: block;
+
+    width: 100%;
+    height: 100%;
+    padding: 13px 10px;
+
+    cursor: pointer;
+    transition: .3s ease all;
+    text-decoration: none;
+
+    color: #aaa;
+    border-bottom: 2px solid #353434;
+}
+
+a
+{
+    font-weight: 400;
+
+    text-decoration: none;
+
+    color: #00b3e4;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+a
+{
+    background: transparent;
+}
+
+.offcanvas ul
+{
+    font-weight: 300;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.offcanvas li
+{
+    display: block;
+}
+
+/*.content-frame
+{}*/
+
+.container
+{
+    display: inline-block;
+
+    width: 38px;
+
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3
+{
+    width: 35px;
+    height: 5px;
+    margin: 6px 0;
+
+    transition: .4s;
+
+    background-color: #333;
+}
+
+/* Rotate first bar */
+.change .bar1
+{
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+            transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+::-webkit-scrollbar { 
+    display: none; 
+}
+/* Fade out the second bar */
+.change .bar2
+{
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3
+{
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+            transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+
+.nav-collapsed .content-frame
+{
+    -webkit-transform: translate3d(0px, 0, 0);
+       -moz-transform: translate(0px, 0);
+        -ms-transform: translate(0px, 0);
+            transform: translate(0px, 0);
+}
+
+.content-frame
+{
+    position: relative;
+
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    /*padding: 50px;*/
+
+    -webkit-transition: -webkit-transform .28s ease-in-out;
+       -moz-transition:    -moz-transform .28s ease-in-out;
+        -ms-transition:     -ms-transform .28s ease-in-out;
+            transition:         transform .28s ease-in-out;
+    -webkit-transform: translate3d(250px, 0, 0);
+       -moz-transform: translate(250px, 0);
+        -ms-transform: translate(250px, 0);
+            transform: translate(250px, 0);
+
+    border-top: 1px solid transparent;
+    background-color: #fff;
+}
+[class*=icono-],
+[class*=icono-] *
+{
+    box-sizing: border-box;
+}
+
+[class*=icono-]
+{
+    font-style: normal;
+
+    position: relative;
+
+    display: inline-block;
+
+    margin-right: 20px !important;
+
+    text-align: left;
+    vertical-align: middle;
+    text-indent: -9999px;
+
+    color: #ddd;
+
+    direction: ltr;
+}
+
+.icono-document
+{
+    width: 26px;
+    height: 32px;
+    margin-left: 4px;
+
+    border: 2px solid;
+    border-radius: 0 0 0 10px;
+}
+
+[class*=icono-]:after,
+[class*=icono-]:before
+{
+    content: '';
+    pointer-events: none;
+}
+
+.icono-document:before
+{
+    position: absolute;
+    bottom: -3px;
+    left: -3px;
+
+    width: 0;
+    height: 0;
+
+    border-width: 5px;
+    border-style: solid;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.icono-document:after
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 13px;
+    height: 2px;
+
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+
+    box-shadow: inset 0 0 0 32px, 0 -5px 0 0, 0 5px 0 0;
+}
+
+/*icono plus*/
+
+[class*=icono-cross],
+[class*=icono-plus]
+{
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+}
+
+[class*=icono-check]:before,
+[class*=icono-cross]:before,
+[class*=icono-plus]:before
+{
+    width: 20px;
+    height: 2px;
+}
+
+[class*=icono-check]:after,
+[class*=icono-check]:before,
+[class*=icono-check]:before,
+[class*=icono-cross]:after,
+[class*=icono-cross]:before,
+[class*=icono-plus]:after,
+[class*=icono-plus]:before
+{
+    box-shadow: inset 0 0 0 32px;
+}
+
+.icono-document:after,
+[class*=icono-check]:before,
+[class*=icono-cross]:after,
+[class*=icono-cross]:before,
+[class*=icono-plus]:after,
+[class*=icono-plus]:before
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+}
+[class*=icono-cross]:after,
+[class*=icono-plus]:after
+{
+    width: 2px;
+    height: 20px;
+}
+
+[class*=icono-check]:before,
+[class*=icono-cross]:after,
+[class*=icono-cross]:before,
+[class*=icono-plus]:after,
+[class*=icono-plus]:before
+{
+    box-shadow: inset 0 0 0 32px;
+}
+
+.icono-document:after,
+[class*=icono-check]:before,
+[class*=icono-cross]:after,
+[class*=icono-cross]:before,
+[class*=icono-plus]:after,
+[class*=icono-plus]:before
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+}
+
+[class*=icono-check]
+{
+    width: 28px;
+    height: 28px;
+    margin: 3px 0 3px 6px;
+
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}
+
+[class*=icono-check]:after
+{
+    position: absolute;
+    bottom: 14px;
+    left: 4px;
+
+    width: 2px;
+    height: 12px;
+}
+
+.icono-cross
+{
+    transform: rotate(45deg);
+}
+.content-frame
+{
+    background: #f5f3ee;
+}
+button
+{
+    font-family: Arial;
+    font-size: 15px;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 31px;
+
+    display: inline-block;
+
+    height: 31px;
+    padding: 0 15px;
+
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: rgb(255, 255, 255);
+    color: black;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 3px;
+    background: linear-gradient(rgb(190, 251, 51) 5%, rgb(148, 202, 34) 100%) rgb(184, 227, 86);
+    box-shadow: rgb(217, 251, 190) 2px 1px 4px -7px inset;
+    text-shadow: rgb(134, 174, 71) 0;
+}
+.datePicker
+{
+    width: 100%;
+    margin: 35px 0 0 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+}
+.taskDetails
+{
+    border-bottom: solid 3px #cabbb0;
+    padding-bottom: 30px;
+}
+
+@media only screen and (min-width: 767px)
+{
+    .getDate
+    {
+        text-align: left;
+        margin-bottom: 10px;
+    }
+    .buttonContainer
+    {
+        margin-top: 20px;
+    }
+    .myJiraDetails
+    {
+        width: 75%;
+    }
+    .nav-collapsed .content-frame
+    {
+        -webkit-transform: translate3d(52px, 0, 0);
+           -moz-transform: translate(52px, 0);
+            -ms-transform: translate(52px, 0);
+                transform: translate(52px, 0);
+    }
+    .container
+    {
+        display: none;
+    }
+    .headerHolder,
+    .taskListHolder
+    {
+        line-height: 56px;
+
+        width: 93%;
+    }
+}
+@media only screen and (max-width: 766px)
+{
+    .contentHolder, .taskIdentifier
+    {
+        padding: 10px;
+    }
+    input.myTextHolder
+    {
+        width: 100%;
+    }
+    button.upDateDetails, button.cancelInfo
+    {
+        margin: 2%;
+        width: 46%;
+    }
+    .taskStatusBtnHolder
+    {
+        text-align: center;
+    }
+    .taskNumber
+    {
+        width: 10%; 
+    }
+    .task
+    {
+        width: 25%;
+    }
+    .taskDescription,.taskStatusBtnHolder
+    {
+        width: 37.5%;
+    }
+    .taskDescription,.task,.taskNumber
+    {
+        height: auto;
+        line-height: 1;
+    }
+    .taskIdentifier
+    {
+        height: auto;
+        padding: 10px;
+        min-height: 70px;
+    }
+    .dateInputHolder
+    {
+        width: 50%;
+        max-width: 150px;
+    }
+    .getDate
+    {
+        text-align: left;
+        width: 100%;
+    }
+    .strDate
+    {
+        float: left;
+    }
+    .issueFinderDiv
+    {
+        padding: 0 0 0 10px;
+    }
+    .buttonContainer
+    {
+        box-sizing: border-box;
+        width: 100%;
+        overflow: hidden;
+        text-align: center;
+        margin: 15px 0 0 0;
+    }
+    textarea.myJiraDetails
+    {
+            width: 100% !important;
+    }
+    button.copyBtn
+    {
+        float: left;
+    }
+    .jiraDetailHolder
+    {
+        margin-top: 20px;
+    }
+}
