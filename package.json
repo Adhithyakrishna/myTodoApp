@@ -1,13 +1,10 @@
 {
   "name": "mytodoapp",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simplistic node js responsive app that keeps you on progress all the time.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "scripts": {
-  "start": "node index.js"
+    "start": "node index.js"
   },
   "author": "Adhithyakrishna",
   "license": "ISC",
@@ -21,5 +18,15 @@
     "express-validator": "*",
     "mongodb": "*",
     "mongoose": "*"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adhithyakrishna/myTodoApp.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Adhithyakrishna/myTodoApp/issues"
+  },
+  "homepage": "https://github.com/Adhithyakrishna/myTodoApp#readme"
 }

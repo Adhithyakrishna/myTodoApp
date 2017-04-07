@@ -6,7 +6,7 @@ var exphbs = require('express-handlebars');
 var expressValidator = require('express-validator');
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
-
+var port = process.env.PORT || 8080;
 var routes = require('./routes/index');
 // var tasks = require('./routes/tasks');
 
@@ -62,15 +62,10 @@ var mongodbUri = "mongodb://taskFordbtest:testdb99*@ds147777.mlab.com:47777/test
 
 mongoose.connect(mongodbUri, options);
 var conn = mongoose.connection;
-
 	conn.on('error', console.error.bind(console, 'connection error:'));
-
 	conn.once('open', function() {
-
-	app.listen(4000, function(){
-		console.log('Server started on port 4000');
-	});
-
 });
 
-
+app.listen(process.env.PORT || 3000, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});
