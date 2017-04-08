@@ -50,6 +50,12 @@ button.disabled {
     border: 1px solid #673ab7;
     border-radius: 8px;
 }
+.headerHolder
+{
+    font-size: 25px;
+    color: black;
+    font-weight: bold;
+}
 .headerContainer
 {
     margin: 0 0 40px 0;
@@ -65,10 +71,15 @@ button.disabled {
     float: left;
     width: 22%;
 }
-.taskDescription,.task
+.taskDescription,.task,.taskStatusBtnHolder 
 {
     color: black;
     font-weight: bold;
+}
+.taskHeaders
+{
+    box-sizing: border-box;
+    overflow: hidden;
 }
 .task,
 .taskNumber
@@ -137,21 +148,61 @@ input.taskDescriptionInput
     max-width: 180px;
     height: 50px;
     width: 48%;
-    background: yellowgreen;
+}
+.addTaskBtn
+{
+    background: #8e44ad;
+    border: 0;
+    border-bottom: 2px solid #80399d;
+    cursor: pointer;
+    -webkit-box-shadow: inset 0 -2px #80399d;
+    box-shadow: inset 0 -2px #80399d;
+}
+.noTaskAvail
+{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+.addTaskToDb
+{
+    background: #e67e22;
+    border: 0;
+    border-bottom: 2px solid #da751c;
+    cursor: pointer;
+    -webkit-box-shadow: inset 0 -2px #da751c;
+    box-shadow: inset 0 -2px #da751c;
 }
 .taskAdder
 {
     padding: 12px 0;
 }
+.listTasks
+{
+    background: #f39c12;
+    border: 0;
+    border-bottom: 2px solid #e8930c;
+    cursor: pointer;
+    -webkit-box-shadow: inset 0 -2px #e8930c;
+    box-shadow: inset 0 -2px #e8930c;
+}
 button.taskRemoved,
 .cancelInfo
 {
     box-sizing: border-box;
-    height: 31px;
     border: 1px solid rgb(191, 31, 17);
     border-radius: 3px;
     background: linear-gradient(rgb(232, 92, 76) 5%, rgb(207, 0, 0) 100%) rgb(232, 58, 38);
     box-shadow: rgb(235, 41, 23) 0 1px 0 0 inset;
+}
+button.printJira
+{
+    background: #3498db;
+    border: 0;
+    border-bottom: 2px solid #2a8bcc;
+    cursor: pointer;
+    -webkit-box-shadow: inset 0 -2px #2a8bcc;
+    box-shadow: inset 0 -2px #2a8bcc;
 }
 .commentBoxHolder
 {
@@ -177,7 +228,7 @@ button.cancelInfo
 }
 .reOpenedTask
 {
-    border: 1px solid red;
+    border: 2px solid red;
 }
 a
 {
@@ -661,29 +712,24 @@ a
     background: #f5f3ee;
 }
 button
-{
-    font-family: Arial;
-    font-size: 15px;
-    font-size: 13px;
-    font-weight: bold;
-    line-height: 31px;
-
-    display: inline-block;
-
+{   
+    line-height: 1;
+    text-transform: capitalize;
+    position: relative;
+    vertical-align: middle;
+    width: 40%;
     height: 31px;
-    padding: 0 15px;
-
+    padding: 0;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    background: #2ecc71;
+    border: 0;
+    border-bottom: 2px solid #28be68;
     cursor: pointer;
-    text-decoration: none;
-    text-transform: uppercase;
-
-    color: rgb(255, 255, 255);
-    color: black;
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 3px;
-    background: linear-gradient(rgb(190, 251, 51) 5%, rgb(148, 202, 34) 100%) rgb(184, 227, 86);
-    box-shadow: rgb(217, 251, 190) 2px 1px 4px -7px inset;
-    text-shadow: rgb(134, 174, 71) 0;
+    -webkit-box-shadow: inset 0 -2px #28be68;
+    box-shadow: inset 0 -2px #28be68;
 }
 .datePicker
 {
@@ -695,6 +741,7 @@ button
 }
 .taskDetails
 {
+    border-top: 3px solid dodgerblue;
     border-bottom: solid 3px #cabbb0;
     padding-bottom: 30px;
 }
@@ -735,7 +782,22 @@ button
 }
 @media only screen and (max-width: 766px)
 {
-    .contentHolder, .taskIdentifier
+    .addTaskBtn,
+    .addTaskToDb
+    {
+        line-height: 1;
+    }
+    button
+    {
+        width: 100%;
+        padding: 0 5px;
+        margin: 0 0 15px 0;
+    }
+    .taskNo
+    {
+        display: none;
+    }
+    .contentHolder
     {
         padding: 10px;
     }
@@ -752,27 +814,27 @@ button
     {
         text-align: center;
     }
-    .taskNumber
-    {
-        width: 10%; 
-    }
     .task
     {
-        width: 25%;
+        width: 37%;
     }
-    .taskDescription,.taskStatusBtnHolder
+    .taskStatusBtnHolder
     {
-        width: 37.5%;
+        width: 23%;
     }
-    .taskDescription,.task,.taskNumber
+    .taskDescription
+    {
+        width: 40%;
+    }
+    .taskDescription,.task,.taskNumber,.taskStatusBtnHolder 
     {
         height: auto;
-        line-height: 1;
+        line-height: 2;
     }
     .taskIdentifier
     {
         height: auto;
-        padding: 10px;
+        padding: 10px 0px 10px 0px;
         min-height: 70px;
     }
     .dateInputHolder

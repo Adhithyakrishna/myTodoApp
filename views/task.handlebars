@@ -1,8 +1,13 @@
 {{#if user}}
+<div class="taskHeaders">
+  <div class="task">Task</div>
+  <div class="taskDescription">Task Description</div>
+  <div class="taskStatusBtnHolder">Modify</div>
+</div>
   <div class="taskDetails">
     {{#each user}}
        <div id="{{this._id}}" class="taskIdentifier{{#if this.isReopened}} reOpenedTask{{/if}}">
-           <div class="task">{{addone @index}} ]   {{this.task}}</div>
+           <div class="task"><span class="taskNo">{{addone @index}} ] </span>{{this.task}}</div>
            <div class="taskDescription">{{this.taskDescription}}</div>
            <div class="taskStatusBtnHolder">
            		<button class="taskCompleted" dataAttr="isCompleted" name ="done">done</button>
