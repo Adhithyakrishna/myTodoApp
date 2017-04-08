@@ -2,7 +2,11 @@
 A simplistic node js responsive app that keeps you on progress all the time.  
 
 # Description
-Started this project out of hope that it might be a means to address every Developer's universal problem called "EOD status update".
+Started this project out of hope that it might be a means to address and help out every Developer's universal problem called "EOD status update".
+
+# Demo site
+
+https://mytasklistapp.herokuapp.com/
 
 # Features
   1) Lets you add a task; add the task to completed list and remove the task from your task list if its transfered to your team-mate
