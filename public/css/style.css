@@ -218,7 +218,10 @@ input.myTextHolder
     height: 90px;
     margin: 0 auto;
 }
-
+.taskDescription
+{
+    min-height: 1px;
+}
 button.upDateDetails,
 button.cancelInfo
 {

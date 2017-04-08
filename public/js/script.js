@@ -1,6 +1,7 @@
 $(document).ready(function() {
     
     mlabapiKey = "arl5ftCIJaqMD8ONxWhaeWRrs6v8-wH0";
+    // create your own mongo account in mlab.com, replace the api key provided and you are good to go (y)
 
     $(".container").unbind('click').bind('click', function(event) {
         $(this).toggleClass('change');
@@ -22,6 +23,20 @@ $(document).ready(function() {
     });
 
     $(".addTaskToDb").on('click', function(event) {
+        var isemptyFlag= false;
+        $.each($(".taskInput,.taskDescriptionInput"), function(index, val) {
+             if(!$(this).val().length)
+             {
+                isemptyFlag = true;
+             }
+        });
+        if(!isemptyFlag)
+        {
+            $(this).html("adding...");
+        }
+        else{
+            alert("Task / Task description cannot be empty");
+        }
         var object = [];
         var date = new Date();
         var month = date.getMonth() + 1;
@@ -133,9 +148,10 @@ $(document).ready(function() {
         }
         var taskDetailsHeader = "||Task Detail||Task Description|| \n ";
         var taskInformation = dateString + taskDetailsHeader;
-
+        var removeHtmlregex = /(&nbsp;|<([^>]+)>)/ig;
         $.each(Details, function(index, val) {
-            taskInformation = taskInformation + "|" + $(this).find(".task").html() + "|" + $(this).find(".taskDescription").html() + "| \n ";
+
+            taskInformation = taskInformation + "|" + $(this).find(".task").html().replace(removeHtmlregex , "").replace(/(&gt;)(?:&nbsp;|<br>)+(\s?&lt;)/g,'$1$2') + "|" + $(this).find(".taskDescription").html().replace(/(&gt;)(?:&nbsp;|<br>)+(\s?&lt;)/g,'$1$2') + "| \n ";
         });
         console.log("the task information", taskInformation);
         $(".myJiraDetails").val(taskInformation);
