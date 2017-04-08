@@ -9,10 +9,10 @@ Started this project out of hope that it might be a means to address and help ou
 https://mytasklistapp.herokuapp.com/
 
 # Features
-  1) Lets you add a task; add the task to completed list and remove the task from your task list if its transfered to your team-mate
+  1) Lets you add a task, add the task to completed list if completed and remove the task from your task list if its transfered to your team-mate or becomes futile.
   2) Gets list of completed and removed tasks by date of updation.
   3) Gives you option to copy the status directly by a click of a button, supports JIRA format.
-  4) Lets you reopen a task should you wish to and re-opened task are hightlighted with updated description.
+  4) Lets you reopen a task should you wish to and re-opened task are hightlighted and shown with newly updated description.
 
 # Project makes use of
   1) node js and packages
@@ -24,6 +24,7 @@ https://mytasklistapp.herokuapp.com/
   1) A little bit of knowledge in node and npm.
   2) Knowledge in Handlebars or any templating languages
   3) Knowldege in Mongo db
+  4) Ajax request and response handling
 
 # installation
   1) Clone or download the repository 
