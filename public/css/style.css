@@ -5,6 +5,12 @@ body
     margin: 0 auto;
     background: #fff1c6;
 }
+button.disabled {
+    background: #c3bebe !important;
+    -webkit-box-shadow: inset 0 -2px #c3bebe !important;
+    box-shadow: inset 0 -2px #c3bebe !important;
+    border: 2px solid #c3bebe !important;
+}
 .dateInputHolder,
 .issueFinderDiv,
 .container,
@@ -35,11 +41,8 @@ body
 .headerHolder,
 .taskListHolder
 {
-    width: 75%;
+    width: 100%;
     text-align: center;
-}
-button.disabled {
-    background: #c3bebe !important;
 }
 .myHeader1,
 .myHeader2,
@@ -758,7 +761,18 @@ button
     }
     .buttonContainer
     {
-        margin-top: 20px;
+        max-width: 50%;
+        margin: 20px auto;
+        text-align: center;
+    }
+    .jiraDetailHolder
+    {
+        width: 50%;
+        margin-top: 35px;
+    }
+    .copyBtn
+    {
+        margin: 20px 0 0 20px;
     }
     .myJiraDetails
     {
