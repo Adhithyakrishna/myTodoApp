@@ -26,7 +26,7 @@ https://mytasklistapp.herokuapp.com/
   3) Knowldege in Mongo db
   4) Ajax request and response handling
 
-# installation
+# Installation
   1) Clone or download the repository 
   2) Open command prompt inside the root folder and enter the command "npm install", which should install all the dependancy packages in node_modules folder.
   3) After it is done, in command prompt type "node index.js"
@@ -37,7 +37,7 @@ https://mytasklistapp.herokuapp.com/
   
   please do not misuse the demo site by adding weird/bad-language tasks and task description.
   
-# credits
+# Credits
   1) https://www.youtube.com/user/TechGuyWeb -Traversy creates a real-world app in real time. Kudos to you!!
   2) https://www.facebook.com/groups/359999434098189/ - nodejs dev group, response comes flying within seconds.
   2) Opensource community - glory to all the big hearts
