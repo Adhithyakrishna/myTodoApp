@@ -24,16 +24,17 @@
 <div class="datePicker">
    <form method="post">
       <div class="getDate">Get tasks for the date:</div>
-      <div class="dateInputHolder">
-         {{!-- <label for="startDate">Task on :</label> --}}
-         {{#if hasDate}}
-         <input class="strDate" value = {{taskList.0.updatedAt}} type ="date" name="startingDate">
-         {{else}}
+      <div class="finderDiv">
+         <div class="dateInputHolder">
+            {{#if hasDate}}
+            <input class="strDate" value = {{taskList.0.updatedAt}} type ="date" name="startingDate">
+            {{else}}
             <input class="strDate" type ="date" name="startingDate">
-         {{/if}}
-      </div>
-      <div class="issueFinderDiv">
-         <input type ="submit" class="findIssues" name="find">
+            {{/if}}
+         </div>
+         <div class="issueFinderDiv">
+            <input type ="submit" class="findIssues" name="find">
+         </div>
       </div>
    </form>
 </div>

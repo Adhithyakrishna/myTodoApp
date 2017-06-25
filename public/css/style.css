@@ -3,22 +3,23 @@ body
     font-family: cursive;
     max-width: 1000px;
     margin: 0 auto;
-    background: #fff1c6;
 }
-.dateInputHolder,
-.issueFinderDiv,
-.container,
-.headerHolder
-{
-    float: left;
+a {
+    color: white;
+    font-weight: bold;
+    -webkit-tap-highlight-color: transparent;
+
+    text-decoration: none;
+}
+.nav-holder {
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
 }
 .headerHolder
 {
     line-height: 39px;
-}
-.issueFinderDiv
-{
-    padding-left: 50px;
 }
 .headerGroup
 {
@@ -32,12 +33,6 @@ body
     color: red;
 }
 
-.headerHolder,
-.taskListHolder
-{
-    width: 75%;
-    text-align: center;
-}
 button.disabled {
     background: #c3bebe !important;
 }
@@ -50,17 +45,41 @@ button.disabled {
     border: 1px solid #673ab7;
     border-radius: 8px;
 }
+.header {
+    width: 24%;
+    float: left;
+    height: 50px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0px; 
+    overflow: hidden;
+    line-height: 40px;
+    border-radius: 7px;
+    border-right: 3px solid #ccc;
+}
 .headerHolder
 {
+    width: 100%;
+    text-align: center;
     font-size: 25px;
     color: black;
     font-weight: bold;
 }
-.headerContainer
+.jiraDetailHolder
 {
-    margin: 0 0 40px 0;
+    text-align: center;
+    margin-top: 20px;
 }
-
+.headerContainer {
+    box-sizing: border-box;
+    padding: 5px 10px 5px 10px;
+    background: black;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+}
 .taskIdentifier
 {
     width: 100%;
@@ -103,7 +122,7 @@ button.disabled {
 .contentHolder
 {
     width: 100%;
-    min-height: 1000px;
+    padding: 10px 28px;
 }
 .contentHolder,
 .taskIdentifier
@@ -122,14 +141,6 @@ input.taskDescriptionInput
     padding: 10px;
     color: black;
     border: 1px solid;
-}
-input.taskInput
-{
-    width: 33%;
-}
-input.taskDescriptionInput
-{
-    width: 65%;
 }
 .taskIncrementer
 {
@@ -175,7 +186,7 @@ input.taskDescriptionInput
 }
 .taskAdder
 {
-    padding: 12px 0;
+    padding: 12px 40px;
 }
 .listTasks
 {
@@ -287,6 +298,7 @@ html input[disabled]
 input
 {
     line-height: normal;
+    border: 1px solid #6d6d6d;
 }
 
 html,
@@ -317,7 +329,7 @@ body
     margin: 0;
 
     color: #4c4c4c;
-    background-color: #fff;
+
 
     text-rendering: optimizeLegibility;
 }
@@ -325,17 +337,6 @@ body
 div
 {
     position: relative;
-}
-
-a
-{
-    font-weight: 400;
-
-    text-decoration: none;
-
-    color: #00b3e4;
-
-    -webkit-tap-highlight-color: transparent;
 }
 
 a:focus,
@@ -430,17 +431,6 @@ p
 
 a
 {
-    font-weight: 400;
-
-    text-decoration: none;
-
-    color: #00b3e4;
-
-    -webkit-tap-highlight-color: transparent;
-}
-
-a
-{
     background: transparent;
 }
 
@@ -453,7 +443,9 @@ a
 
     list-style: none;
 }
-
+.header {
+    cursor: pointer;
+}
 .offcanvas li
 {
     display: block;
@@ -465,10 +457,9 @@ a
 .container
 {
     display: inline-block;
-
     width: 38px;
-
     cursor: pointer;
+    margin: 8px 8px 0px 10px;
 }
 
 .bar1,
@@ -517,6 +508,7 @@ a
 
 .content-frame
 {
+    background: #f5f3ee;
     position: relative;
 
     max-width: 100%;
@@ -528,10 +520,6 @@ a
        -moz-transition:    -moz-transform .28s ease-in-out;
         -ms-transition:     -ms-transform .28s ease-in-out;
             transition:         transform .28s ease-in-out;
-    -webkit-transform: translate3d(250px, 0, 0);
-       -moz-transform: translate(250px, 0);
-        -ms-transform: translate(250px, 0);
-            transform: translate(250px, 0);
 
     border-top: 1px solid transparent;
     background-color: #fff;
@@ -710,12 +698,9 @@ a
 {
     transform: rotate(45deg);
 }
-.content-frame
-{
-    background: #f5f3ee;
-}
 button
-{   
+{
+    display: inline-block;
     line-height: 1;
     text-transform: capitalize;
     position: relative;
@@ -748,28 +733,45 @@ button
     border-bottom: solid 3px #cabbb0;
     padding-bottom: 30px;
 }
-
+.listTasks, .printJira {
+    width: 230px;
+    height: 50px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+.getDate
+{
+    text-align: center;
+    margin-bottom: 10px;
+    color: black;
+    font-weight: bold;
+}
+button.copyBtn {
+    margin: 20px 0px 20px 0px !important;
+    width: 30%;
+    font-weight: bold;
+    border-radius: 3px;
+    height: 50px;
+}
 @media only screen and (min-width: 767px)
 {
-    .getDate
-    {
-        text-align: left;
-        margin-bottom: 10px;
+    .finderDiv {
+        text-align: center;
+    }
+    .dateInputHolder,.issueFinderDiv {
+        display: inline-block;
     }
     .buttonContainer
     {
         margin-top: 20px;
+        text-align: center;
     }
     .myJiraDetails
     {
-        width: 75%;
-    }
-    .nav-collapsed .content-frame
-    {
-        -webkit-transform: translate3d(52px, 0, 0);
-           -moz-transform: translate(52px, 0);
-            -ms-transform: translate(52px, 0);
-                transform: translate(52px, 0);
+       height: 190px;
+       display: inline-block;
+       width: 75%;
+       border: 2px solid rgb(169, 169, 169);
     }
     .container
     {
@@ -779,12 +781,87 @@ button
     .taskListHolder
     {
         line-height: 56px;
-
-        width: 93%;
+        text-align: center;
+        width: 100%;
+    }
+    input.taskInput
+    {
+        width: 33%;
+    }
+    input.taskDescriptionInput
+    {
+        width: 64%;
     }
 }
 @media only screen and (max-width: 766px)
 {
+    body {
+        background-color: black;
+    }
+    .headerHolder {
+        height: 65px;
+        line-height: 45px;
+        background: black;
+        color: white;
+        box-sizing: border-box;
+        overflow: hidden;
+        padding: 10px;
+        border-bottom: 2px solid white;
+        }
+    .content-frame {
+            -webkit-transform: translate3d(250px, 0, 0);
+               -moz-transform: translate(250px, 0);
+                -ms-transform: translate(250px, 0);
+                    transform: translate(250px, 0);
+                }
+                .nav-holder {
+                    position: fixed;
+                    top: 65px;
+                    left: 0;
+                    overflow: hidden;
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                    width: 300px;
+                    height: 100%;
+                    cursor: default;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                    -webkit-transition: width ease-in-out .28s, background linear .1s;
+                    -moz-transition: width ease-in-out .28s, background linear .1s;
+                    -o-transition: width ease-in-out .28s, background linear .1s;
+                    transition: width ease-in-out .28s, background linear .1s;
+                    -webkit-transform: translate3d(0px, 0, 0);
+                    -moz-transform: translate(0px, 0);
+                    -ms-transform: translate(0px, 0);
+                    transform: translate(0px, 0);
+                    color: #c8c8c8;
+                    background: #222;
+                    -webkit-touch-callout: none;
+                    -o-user-select: none;
+                }
+                .header {
+                    width: 100%;
+                    border-bottom: 2px solid #353434;
+                        border-radius: 0px;
+                        height: 57px;
+                }
+                .headerContainer {
+                    padding: 0px;
+                }
+    .taskAdder {
+        padding: 12px 10px;
+    }
+    input.taskInput
+    {
+        width: 100%;
+    }
+    input.taskDescriptionInput
+    {
+        width: 100%;
+        margin-top: 20px;
+    }
     .addTaskBtn,
     .addTaskToDb
     {
@@ -845,9 +922,12 @@ button
         width: 50%;
         max-width: 150px;
     }
+    .dateInputHolder, .issueFinderDiv {
+        display: inline-flex;
+    }
     .getDate
     {
-        text-align: left;
+        text-align: center;
         width: 100%;
     }
     .strDate
@@ -869,13 +949,9 @@ button
     textarea.myJiraDetails
     {
             width: 100% !important;
+            height: 200px;
     }
-    button.copyBtn
-    {
-        float: left;
-    }
-    .jiraDetailHolder
-    {
-        margin-top: 20px;
+    button.copyBtn {
+        width: 80%;
     }
 }
