@@ -25,13 +25,13 @@ $(document).ready(function() {
 }
 
 function customiseMobile() {
-    $(".content-frame").height(parseInt($(".nav-holder").outerHeight() - 2) + "px");
     var scrolledPos = $(window).scrollTop();
     if (!(scrolledPos < 64)) {
         $(".nav-holder").css('top', '-' + scrolledPos + 'px');
     } else {
         $(".nav-holder").css('top', 65 + 'px');
     }
+    $(".content-frame").height(parseInt($(".nav-holder").outerHeight() - 2) + "px");
 }
 function customiseDesktop() {
     $(".nav-holder").css('top', 0 + 'px');
