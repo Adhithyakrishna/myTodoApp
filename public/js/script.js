@@ -31,7 +31,6 @@ function customiseMobile() {
     } else {
         $(".nav-holder").css('top', 65 + 'px');
     }
-    $(".content-frame").height(parseInt($(".nav-holder").outerHeight() - 2) + "px");
 }
 function customiseDesktop() {
     $(".nav-holder").css('top', 0 + 'px');
