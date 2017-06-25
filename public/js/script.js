@@ -40,8 +40,6 @@ $(window).bind('resize scroll', function(event) {
     setHeight();
 });
 
-setHeight();
-
 // $(".nav-holder").hover(
 //     function() {
 //         $("body").toggleClass('nav-collapsed');
@@ -234,5 +232,5 @@ function updateInfo(identifier, attribute, comment) {
         location.reload();
     });;
 }
-
+    setHeight();
 });
