@@ -240,6 +240,10 @@ button.cancelInfo
     height: 40px;
     margin: 10px;
 }
+.finderDiv {
+	box-sizing: border-box;
+	overflow: hidden;
+}
 .reOpenedTask
 {
     border: 2px solid #fffc93;
@@ -299,6 +303,8 @@ input
 {
     line-height: normal;
     border: 1px solid #6d6d6d;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 html,
@@ -923,7 +929,9 @@ button.copyBtn {
         max-width: 150px;
     }
     .dateInputHolder, .issueFinderDiv {
-        display: inline-flex;
+        display: inline-block;
+        box-sizing: border-box;
+        overflow: hidden;
     }
     .getDate
     {
@@ -933,6 +941,9 @@ button.copyBtn {
     .strDate
     {
         float: left;
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
     }
     .issueFinderDiv
     {
