@@ -29,7 +29,7 @@
          {{#if hasDate}}
          <input class="strDate" value = {{taskList.0.updatedAt}} type ="date" name="startingDate">
          {{else}}
-            <input class="strDate" type ="date" name="startingDate">
+         <input class="strDate" type ="date" name="startingDate">
          {{/if}}
       </div>
       <div class="issueFinderDiv">
@@ -45,12 +45,14 @@
 <div class="datePicker">
    <form method="post">
       <div class="getDate">Get tasks for the date:</div>
-      <div class="dateInputHolder">
-         {{!-- <label for="startDate">Task on :</label> --}}
-         <input class="strDate" type ="date" name="startingDate">
-      </div>
-      <div class="issueFinderDiv">
-         <input type ="submit" class="findIssues" name="find">
+      <div class="finderDiv">
+         <div class="dateInputHolder">
+            {{!-- <label for="startDate">Task on :</label> --}}
+            <input class="strDate" type ="date" name="startingDate">
+         </div>
+         <div class="issueFinderDiv">
+            <input type ="submit" class="findIssues" name="find">
+         </div>
       </div>
    </form>
 </div>

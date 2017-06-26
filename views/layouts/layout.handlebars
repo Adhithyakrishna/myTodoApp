@@ -1,43 +1,41 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>To Do App</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script type="text/javascript" src="/js/script.js"></script>
-	<link rel="stylesheet" type="text/css" href="/css/style.css">
-</head>
-<body class="nav-collapsed">
-
-
-
-<div class="nav-holder">
-    <nav class="offcanvas" role="navigation">
-        <ul>
-          <li>
-            <ul>
-              <li><a href="/task"><i class="icono-document"></i> Task List</a></li>
-              <li><a href="/addTask"><i class="icono-plus"></i> Add Task </a></li>
-              <li><a href="/completed"><i class="icono-check"></i> Completed Tasks</a></li>
-              <li><a href="/removed"><i class="icono-cross"></i> Removed tasks</a></li>
-            </ul>
-          </li>
-        </ul>
-    </nav>
-</div>
-
-<div class="content-frame">
-	<div class="container">
-	  <div class="bar1"></div>
-	  <div class="bar2"></div>
-	  <div class="bar3"></div>
-	</div>
-	<div class="headerHolder">
-	My To-do List
-	</div>
-	<div class="contentHolder">
-		{{{body}}}
-	</div>
-</div>
-</body>
+	<head>
+		<title>To Do App</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="/js/script.js"></script>
+		<link rel="stylesheet" type="text/css" href="/css/style.css">
+	</head>
+	<body class="nav-collapsed">
+		<div class="headerHolder">
+			My To-do List
+		</div>
+		<div class="nav-holder">
+			<div class="headerContainer">
+				<div class="header">
+					<a href="/task"><i class="icono-document"></i> Task List</a>
+				</div>
+				<div class="header">
+					<a href="/addTask"><i class="icono-plus"></i> Add Task </a>
+				</div>
+				<div class="header">
+					<a href="/completed"><i class="icono-check"></i> Completed Tasks</a>
+				</div>
+				<div class="header">
+					<a href="/removed"><i class="icono-cross"></i> Removed tasks</a>
+				</div>
+			</div>
+		</div>
+		<div class="content-frame">
+			<div class="container">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div>
+			<div class="contentHolder">
+				{{{body}}}
+			</div>
+		</div>
+	</body>
 </html>
